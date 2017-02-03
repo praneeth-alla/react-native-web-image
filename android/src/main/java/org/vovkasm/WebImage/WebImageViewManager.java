@@ -19,7 +19,7 @@ import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.annotations.ReactPropGroup;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.facebook.yoga.YogaConstants;
+import com.facebook.csslayout.CSSConstants;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -99,9 +99,9 @@ class WebImageViewManager extends SimpleViewManager<WebImageView> {
             ViewProps.BORDER_TOP_WIDTH,
             ViewProps.BORDER_RIGHT_WIDTH,
             ViewProps.BORDER_BOTTOM_WIDTH
-    }, defaultFloat = YogaConstants.UNDEFINED)
+    }, defaultFloat = CSSConstants.UNDEFINED)
     public void setBorderWidth(WebImageView view, int index, float borderWidth) {
-        if (!YogaConstants.isUndefined(borderWidth)) {
+        if (!CSSConstants.isUndefined(borderWidth)) {
             borderWidth = PixelUtil.toPixelFromDIP(borderWidth);
         }
 
@@ -118,9 +118,9 @@ class WebImageViewManager extends SimpleViewManager<WebImageView> {
             ViewProps.BORDER_TOP_RIGHT_RADIUS,
             ViewProps.BORDER_BOTTOM_RIGHT_RADIUS,
             ViewProps.BORDER_BOTTOM_LEFT_RADIUS
-    }, defaultFloat = YogaConstants.UNDEFINED)
+    }, defaultFloat = CSSConstants.UNDEFINED)
     public void setBorderRadius(WebImageView view, int index, float borderRadius) {
-        if (!YogaConstants.isUndefined(borderRadius)) {
+        if (!CSSConstants.isUndefined(borderRadius)) {
             borderRadius = PixelUtil.toPixelFromDIP(borderRadius);
         }
 

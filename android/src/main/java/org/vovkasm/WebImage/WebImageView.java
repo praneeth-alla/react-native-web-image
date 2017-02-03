@@ -8,8 +8,8 @@ import android.graphics.drawable.LayerDrawable;
 import android.support.annotation.ColorInt;
 import android.widget.ImageView;
 
-import com.facebook.react.uimanager.FloatUtil;
-import com.facebook.yoga.YogaConstants;
+import com.facebook.csslayout.FloatUtil;
+import com.facebook.csslayout.CSSConstants;
 
 public class WebImageView extends ImageView {
     public static final int DEFAULT_BORDER_COLOR = Color.TRANSPARENT;
@@ -18,9 +18,9 @@ public class WebImageView extends ImageView {
 
     private int mBorderColor = DEFAULT_BORDER_COLOR;
     private float mBorderRadius = DEFAULT_BORDER_RADIUS;
-    private float[] mBorderRadii = new float[]{YogaConstants.UNDEFINED, YogaConstants.UNDEFINED, YogaConstants.UNDEFINED, YogaConstants.UNDEFINED};
+    private float[] mBorderRadii = new float[]{CSSConstants.UNDEFINED, CSSConstants.UNDEFINED, CSSConstants.UNDEFINED, CSSConstants.UNDEFINED};
     private float mBorderWidth = DEFAULT_BORDER_WIDTH;
-    private float[] mBorderSizes = new float[]{YogaConstants.UNDEFINED, YogaConstants.UNDEFINED, YogaConstants.UNDEFINED, YogaConstants.UNDEFINED};
+    private float[] mBorderSizes = new float[]{CSSConstants.UNDEFINED, CSSConstants.UNDEFINED, CSSConstants.UNDEFINED, CSSConstants.UNDEFINED};
     private Drawable mDrawable;
 
     public WebImageView(Context context) {
@@ -97,7 +97,7 @@ public class WebImageView extends ImageView {
             RoundedDrawable roundedDrawable = (RoundedDrawable) drawable;
 
             for (int side=0; side<4; side++) {
-                if (YogaConstants.isUndefined(mBorderSizes[side])) {
+                if (CSSConstants.isUndefined(mBorderSizes[side])) {
                     roundedDrawable.setBorderWidth(side, mBorderWidth);
                 } else {
                     roundedDrawable.setBorderWidth(side, mBorderSizes[side]);
@@ -106,22 +106,22 @@ public class WebImageView extends ImageView {
 
             roundedDrawable.setBorderColor(mBorderColor);
 
-            if (YogaConstants.isUndefined(mBorderRadii[0])) {
+            if (CSSConstants.isUndefined(mBorderRadii[0])) {
                 roundedDrawable.setCornerRadius(Corner.TOP_LEFT, mBorderRadius);
             } else {
                 roundedDrawable.setCornerRadius(Corner.TOP_LEFT, mBorderRadii[0]);
             }
-            if (YogaConstants.isUndefined(mBorderRadii[1])) {
+            if (CSSConstants.isUndefined(mBorderRadii[1])) {
                 roundedDrawable.setCornerRadius(Corner.TOP_RIGHT, mBorderRadius);
             } else {
                 roundedDrawable.setCornerRadius(Corner.TOP_RIGHT, mBorderRadii[1]);
             }
-            if (YogaConstants.isUndefined(mBorderRadii[2])) {
+            if (CSSConstants.isUndefined(mBorderRadii[2])) {
                 roundedDrawable.setCornerRadius(Corner.BOTTOM_RIGHT, mBorderRadius);
             } else {
                 roundedDrawable.setCornerRadius(Corner.BOTTOM_RIGHT, mBorderRadii[2]);
             }
-            if (YogaConstants.isUndefined(mBorderRadii[3])) {
+            if (CSSConstants.isUndefined(mBorderRadii[3])) {
                 roundedDrawable.setCornerRadius(Corner.BOTTOM_LEFT, mBorderRadius);
             } else {
                 roundedDrawable.setCornerRadius(Corner.BOTTOM_LEFT, mBorderRadii[3]);

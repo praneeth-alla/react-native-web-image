@@ -1,0 +1,49 @@
+{
+  "name": "react-native-web-image",
+  "version": "0.0.4",
+  "description": "An image component for react-native with persistent disk and memory caching",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-sample --",
+    "start-sample": "react-native start --root samples/SampleApp",
+    "run-sample-android": "react-native run-android --root samples/SampleApp",
+    "run-sample-ios": "react-native run-ios --project-path samples/SampleApp/ios"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "android",
+    "cache-image",
+    "cache",
+    "mobile"
+  ],
+  "author": "Vladimir Timofeev <vovkasm@gmail.com>",
+  "homepage": "https://github.com/vovkasm/react-native-web-image",
+  "bugs": {
+    "url": "https://github.com/vovkasm/react-native-web-image/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vovkasm/react-native-web-image.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "babel-preset-react-native": "^1.9.0",
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-classes": "^0.1.1",
+    "eslint-plugin-import": "^2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.8.0",
+    "eslint-plugin-react-native": "^2.0.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "react": "15.4.2",
+    "react-native": "0.40.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.40.0"
+  }
+}
